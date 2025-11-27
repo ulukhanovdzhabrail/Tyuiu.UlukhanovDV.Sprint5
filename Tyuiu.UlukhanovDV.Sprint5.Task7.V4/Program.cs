@@ -1,0 +1,28 @@
+﻿using Tyuiu.UlukhanovDV.Sprint5.Task7.V4.Lib;
+// See https://aka.ms/new-console-template for more information
+DataService ds = new DataService();
+Console.Title = "Спринт #5 | Выполнил: Улуханов Д. В. | СМАРТб-25-1";
+Console.WriteLine("***************************************************************************");
+Console.WriteLine("* Спринт #5                                                               *");
+Console.WriteLine("* Тема:Добавление к решению итоговых проектов по спринту                  *");
+Console.WriteLine("* Задание #7                                                              *");
+Console.WriteLine("* Вариант #4                                                              *");
+Console.WriteLine("* Выполнил: Улуханов Джабраил Вагифович | СМАРТб-25-1                     *");
+Console.WriteLine("***************************************************************************");
+Console.WriteLine("* УСЛОВИЕ:                                                                *");
+Console.WriteLine("* Заменить все русские буквы на #.                                        *");
+Console.WriteLine("*                                                                         *");
+Console.WriteLine("*                                                                         *");
+Console.WriteLine("***************************************************************************");
+Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+Console.WriteLine("***************************************************************************");
+string path = @"C:\DataSprint5\InPutDataFileTask7V4.txt";
+string pathSaveFile = @"C:\Users\djabr\AppData\Local\Temp\OutPutDataFileTask7V4.txt";
+Console.WriteLine("Данные находятся в файле: " + path);
+Console.WriteLine("***************************************************************************");
+Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+Console.WriteLine("***************************************************************************");
+Console.WriteLine("Находится в файле");
+pathSaveFile = ds.LoadDataAndSave(path);
+Console.WriteLine(pathSaveFile);
+Console.ReadKey();
