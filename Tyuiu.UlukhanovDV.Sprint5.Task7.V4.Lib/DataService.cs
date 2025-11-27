@@ -19,19 +19,20 @@ namespace Tyuiu.UlukhanovDV.Sprint5.Task7.V4.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
+                    string str = "";
                     for (int i = 0; i < line.Length; i++)
                     {
                         if ((line[i] >= 'а' && line[i] <= 'я') || line[i] == 'ё' || (line[i] >= 'А' && line[i] <= 'Я') || line[i] == 'Ё')
                         {
-                            strLine = strLine + "#";
+                            str = str + "#";
                         }
                         else
                         {
-                            strLine = strLine + line[i];
-                        }
-                            File.AppendAllText(pathSaveFile, strLine);
-                        strLine = "";
+                            str = str + line[i];
+                        }                       
                     }
+                    strLine += str;
+                    File.AppendAllText(pathSaveFile, strLine);                   
                 }
             }
             return strLine;
